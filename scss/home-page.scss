@@ -1,0 +1,297 @@
+@import './constants.scss';
+
+/* Home Page Styles */
+
+.front-page {
+	.grid-wrap {
+		.pagination-wrap {
+			padding: 30px 15px 15px 15px;
+		}
+	}
+	.info h3 {
+		font-size: 1.8em;
+		margin-bottom: 15px;
+	}
+	.info p {
+		font-size: 1.2em;
+	}
+	.mobile-whisky-title {
+		display: none;
+		padding: 15px 30px 15px 30px;
+		border-bottom: 1px solid #eee;
+		background: $white;
+		opacity: .9;
+	}
+	.product {
+		a {
+		color: $black;
+		&:visited { }
+		&:hover { color: #444; }
+		&:active { }
+		}
+	}
+	.product, .blog-post {
+		position: relative;
+		float: left;
+		width: calc(50%);
+		height: 355px;
+	}
+	.blog-post {
+		height: 200px;
+		h3 {
+			font-size: 1.3em;
+			line-height: 1.2em;
+		}
+	}
+	.product-inner, .blog-post-inner {
+		position: relative;
+		box-shadow: 1px 1px 9px #000;
+		background: #fff;
+		margin: 10px;
+		height: 332px;
+		border: 1px $black solid;
+		overflow: hidden;
+		opacity: .9;
+	}
+	.blog-post-inner {
+		height: 178px;
+	}
+
+	.product .info ul, .more-drop-down ul {
+		margin-bottom: 10px;
+	}
+	.product .info ul li, .more-drop-down ul li {
+		list-style: none;
+		padding: 10px 0;
+		border-bottom: 1px solid #eee;
+	}
+	.more-drop-down {
+		position: absolute;
+		top: 36px;
+		right: 0;
+		width: 200px;
+		padding: 15px 15px 5px 15px;
+		background: #fff;
+		border: 1px solid #eee;
+		box-shadow: -1px 1px 5px #000;
+	}
+	.more-drop-down ul li:last-child {
+		border: 0;
+	}
+	.rating-label {
+		margin: 15px 0 6px 0;
+	}
+	.thumb {
+		position: absolute;
+		top: 30px;
+		bottom: 30px;
+		left: 30px;
+		width: 30%;
+		overflow: hidden;
+	}
+	.info {
+		position: absolute;
+		top: 40px;
+		left: calc(30% + 50px);
+		right: 30px;
+		bottom: 30px;
+	}
+	.more-info {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #000;
+		width: 26px;
+		height: 26px;
+		padding: 5px;
+	}
+	.more-info img {
+		width: 100%;
+	}
+	.home-page-title {
+		padding: 30px 0 15px 0;
+		color: #fff;
+		text-shadow: 2px 2px 9px #000;
+	}
+	.distilliries, .blog-preview-wrap {
+		padding-top: 15px;
+	}
+	.dist-grid {
+
+	}
+	.dist-thumb {
+		position: relative;
+		float: left;
+		width: 25%;
+		padding-top: 25%;
+		/*background: url(assets/barrels.jpg);
+		background-size: cover;*/
+
+	}
+	.dist-thumb:after {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		/*box-shadow: inset 0px 0px 150px black;*/
+		background: rgba(0,0,0,.5)
+	}
+	.dist-logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		overflow: hidden;
+		z-index: 9999;
+	}
+	.dist-btn {
+		padding-top: 10px;
+	}
+	.filter-icon {
+		top: -46px;
+		left: 15px;
+		width: 30px;
+	}
+	/* Blog Thumb Styles */
+	.blog-wrap {
+		padding-bottom: 30px;
+	}
+	.blog-post .blog-thumb {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 35%;
+		background: url(../assets/barrels.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+	.blog-post .blog-thumb-desc {
+		position: absolute;
+		top: 50%;
+		left: calc(35% + 15px);
+		right: 15px;
+		transform: translateY(-50%);
+		
+	}
+	.blog-post a {
+		color: $black;
+	}
+	.blog-thumb-desc h2 {
+		margin-bottom: 10px;
+	}
+	.blog-thumb-desc p {
+		margin-bottom: 10px;
+		line-height: 16px;
+		font-size: 16px;
+	}
+	.mobile-fav {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.front-page {
+		.blog-post {
+			width: calc(100%);
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.front-page {
+		.product, .blog-post {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.front-page {
+		.dist-thumb {
+			width: 33.333%;
+			padding-top: 33.333%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.front-page {
+		.dist-thumb {
+			width: 50%;
+			padding-top: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.front-page {
+		.thumb {
+			position: relative;
+			float: left;
+			height: 200px;
+			width: 115px;
+			top: initial;
+		    bottom: initial;
+		    left: initial;
+		        margin: 10px 20px 20px 20px
+
+		}
+		.info {
+			position: relative;
+    		float: left;
+    		top: initial;
+			left: initial;
+			right: initial;
+			bottom: initial;
+			width: calc(100% - 170px);
+			padding-top: 10px;
+			h3 {
+				display: none;
+				/* font-size: 1.8em;
+				margin-bottom: 15px; */
+			}
+			.mobile-fav {
+				position: relative;
+			}
+		}
+		.desktop-fav {
+			display: none;
+		}
+		.mobile-whisky-title, .mobile-fav {
+			display: block;
+		}
+		.desktop-whisky-title {
+			display: none;
+		}
+		.product {
+			.mobile-whisky-wrap {
+				position: relative; 
+				height: 80%;
+				padding-top: 10px;
+			}
+		}
+		.product-inner {
+			height: auto;
+			padding-bottom: 15px;
+		}
+		.blog-thumb-desc h2 {
+			font-size: 1.2em;
+		}
+		.blog-thumb-desc p {
+			margin-bottom: 0;
+			font-size: .8em;
+		}
+		.home-page-title {
+			padding: 30px 15px 15px 15px;
+		}
+		.filter-icon {
+			top: -43px;
+			left: initial;
+			right: 15px;
+			width: 25px;
+		}
+	}
+	
+}

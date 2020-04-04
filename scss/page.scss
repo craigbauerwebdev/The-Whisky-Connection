@@ -1,0 +1,29 @@
+@import './constants.scss';
+
+/* Page Template Styles */
+
+.page {
+	.hiw-icon {
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		.icon {
+			width: 40%;
+			opacity: .7;
+		}
+	}
+
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+	.page {
+
+	}
+	
+}
+@media screen and (max-width: 600px) {
+	.page {
+
+	}
+}

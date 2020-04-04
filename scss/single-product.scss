@@ -1,0 +1,346 @@
+@import './constants.scss';
+
+/* Single Product Page */
+
+.single-menu-bar {
+	padding: 20px 0; 
+	background: #111;
+	a {
+		color: $link-color;
+	}
+}
+.single-menu-bar ul li {
+	font-size: 16px;
+	display: inline-block;
+	margin: 0 15px;
+}
+.single-product-page {
+	h1.whisky-title {
+		padding: 30px 0 30px 0;
+	}
+	.single-product-wrap {
+		background: #fff;
+		opacity: .9;
+	}
+	.main-product-image {
+		float: left;
+		margin: 30px 6% 30px 15%;
+		width: 340px;
+	}
+	.single-details {
+		margin-top: 30px;
+		padding-right: 30px;
+		.simplefavorite-button {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	.single-details ul li {
+		list-style: none;
+		font-size: 1.1rem;
+		margin-bottom: 20px;
+	}
+	.single-left {
+		float: left;
+	}
+	.single-section-header {
+		background: #111;
+		color: #fff;
+		padding: 15px 0;
+	}
+	.single-section-content {
+		background: #fff;
+		opacity: .9;
+	}
+	.single-section-content-tasting {
+		background: $black;
+	}
+	.single-section-text {
+		padding: 30px;
+		line-height: 1.3em;
+	}
+	.single-section-text p {
+		margin-bottom: .5em;
+	}
+	.single-map {
+		position: relative;
+		padding-top: 35%;
+	}
+	.single-share-wrap {
+		margin: 15px 0;
+	}
+	.rating-label {
+		margin-bottom: 5px;
+	}
+	.star-rating {
+		margin-bottom: 15px;
+	}
+	.track {
+		position: relative; 
+		height: 20px;
+		width: 250px;
+		max-width: 250px;
+		background: #ccc;
+	}
+	.level {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background: $link-color;
+	}
+	.tasting-note {
+		position: relative; 
+		float: left; 
+		width: 33.3333333%; 
+		padding-top: 25%;
+	}
+	.tasting-note-shadow {
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0; 
+		background: rgba(0,0,0,.6);
+	}
+	.tasting-title {
+		margin-bottom: 15px; 
+		font-size: 20px;
+	}
+	.tasting-position {
+		color: #fff; 
+		top: 50%; 
+		left: 30px; 
+		right: 30px; 
+		transform: translateY(-50%);
+	}
+	.where-to-buy {
+		a{
+			color: #111;
+		}
+	}
+	.simplefavorite-button.preset {
+		 position: absolute; 
+		top: -3px;
+		left: 5px;
+		z-index: 9999;
+	}
+	.main-dist-image {
+		background: rgba(0, 0, 0, .5); 
+		padding-top: 25%;
+	}
+	.related-product {
+		float: left;
+		width: 25%;
+		overflow: hidden;
+		text-align: center;
+		height: 380px;
+		img {
+			height: 300px;
+		}
+		h2 {
+			color: $black;
+			font-size: 22px;
+		}
+	}
+	.noshop-bling {
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto;
+	}
+	.shop-link {
+		float: left;
+		width: 25%;
+		li {
+			list-style: none;
+			text-align: center;
+			color: #333;
+			.buy-inner {
+				margin: 10px;
+				border: 1px gray solid;
+			}
+			p {
+				margin: 5px 0;
+			}
+			button {
+				margin: 10px 0;
+			}
+			.shop-flag {
+				width: 120px;
+				height: 70px;
+				margin: 0 auto;
+			}
+			.go-to-shop {
+
+			}
+			.shop-name {
+				font-size: 1.2em;
+			}
+			.bottle-size {
+				
+			}
+		}
+	}
+	.authorInfo {
+		h3 {
+			margin: 0;
+		}
+	}
+	p.no-shop {
+		padding-top: 15px;
+		margin: 0 30px 0 30px;
+		padding-bottom: 15px;
+	}
+	.noshop-bling {
+		padding-bottom: 15px;
+	}
+	.back-to-distilleries {
+		position: absolute;
+    	top: 5px;
+    	left: 5px;
+    	z-index: 99;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.single-product-page {
+		.shop-link {
+			width: 33.3333333%;
+			li {
+				.shop-name {
+					font-size: 1em;
+				}
+			}	
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.single-menu-bar {
+		display: none;
+	}
+	.single-product-page {
+		.main-product-image {
+			margin: 30px 5% 30px 10%;
+		}
+		.related-product {
+			width: 50%;
+			height: 320px;
+			img {
+				height: 240px;
+			}
+			h2 {
+				font-size: 18px;
+			}
+		}
+		.single-dist-image { 
+			padding-top: 40%;
+		}
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.single-product-page {
+		.tasting-position p {
+		    line-height: 1em;
+		}
+		.shop-link {
+			width: 50%;
+			li {
+				.shop-name {
+					font-size: 1em;
+				}
+			}	
+		}	
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+	.single-product-page {
+		.main-product-image {
+			margin: 30px 5% 30px 5%;
+		}
+	}
+}
+
+@media screen and (max-width: 740px) {
+	
+	.single-product-page {
+		h1.whisky-title {
+			padding: 0 0 30px 0;
+		}
+		.main-product-image {
+			float: none;
+			margin: 0 auto 15px auto;
+			width: 65%;
+		}
+		.single-details {
+			margin-top: 0;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+		.tasting-note {
+			width: 100%; 
+			padding-top: 50%;
+		}
+		.tasting-position p {
+		    line-height: initial;
+		}
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	.single-product-page {
+		.main-product-image {
+			width: 75%;
+			img {
+				margin-top: 30px;
+			}
+			
+		}
+		.single-details {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		.mobile-top-spacer {
+			height: 40px;
+		}
+		.shop-link {
+			width: 100%;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 400px) {
+	.single-product-page {
+		.related-product {
+			height: 280px;
+			img {
+				height: 200px;
+			}
+			h2 {
+				font-size: 16px;
+			}
+		}
+		.main-dist-image { 
+			padding-top: 55%;
+		}
+	}	
+}
+
+@media screen and (max-width: 340px) {
+	.single-product-page {
+		.shop-link {
+			.shop-info {
+				p {
+					font-size: .9em;
+				}
+			}
+		}
+	}
+}

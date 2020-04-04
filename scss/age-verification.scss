@@ -1,0 +1,70 @@
+@import './constants.scss';
+
+/* Age Verification Styles */
+.age-verification-wrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: $black;
+	background: url(../images/barrels-age-verification.jpg);
+	background-position: center;
+	background-size: cover;
+	/*background: rgba(0,0,0,.8);*/
+	z-index: 9999999999999;
+	padding: 30px;
+	img {
+		/* margin-top: 15px;
+		max-width: 300px; */
+		width: 180px;
+	}
+	.info {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		a {
+			background: none;
+			padding: 10px 30px;
+			margin-right: 20px;
+			color: #eee;
+			text-shadow: 1px 1px 1px #000;
+			text-decoration: none;
+			font-size: 1.4rem;
+			border: #eee solid 3px;
+		}
+		.inner-text {
+			color: #eee;
+			margin-bottom: 40px;
+		}
+	}
+	.social {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		#search-icon {
+			display: none;
+		}
+		a {
+			margin-right: 15px;
+			img {
+				height: 40px;
+				width: auto;
+			}
+		}
+	}
+}
+/* Media Queries */
+@media screen and (max-width: 960px) {
+	.age-verification-wrap {
+		
+
+	}
+	
+}
+@media screen and (max-width: 600px) {
+	.age-verification-wrap {
+		
+	}
+}

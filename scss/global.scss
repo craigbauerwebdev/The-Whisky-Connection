@@ -1,0 +1,377 @@
+@import './constants.scss';
+
+/* Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
+	border: 0;
+}
+body {
+	background: $black;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Patua One','Helvetica', 'Arial', cursive;
+	}
+	h1 {
+		font-size: 3em;
+		strong {
+			font-family: 'Patua One','Helvetica', 'Arial', cursive;
+		}
+	}
+	h2 {
+		font-size: 2.6em;
+		line-height: 1em;
+		margin-bottom: 20px;
+		strong {
+			font-family: 'Patua One','Helvetica', 'Arial', cursive;
+		}
+	}
+	h3 {
+		font-size: 1.9em;
+		line-height: 1em;
+		margin: 0px 0 8px 0;
+		strong {
+			font-family: 'Patua One','Helvetica', 'Arial', cursive;
+		}
+	}
+	h4 {
+		font-size: 1.9em;
+		line-height: 1em;
+		margin: 0px 0 8px 0;
+		strong {
+			font-family: 'Patua One','Helvetica', 'Arial', cursive;
+		}
+	}
+	p {
+		margin-bottom: 15px;
+		line-height: 1.4em;	
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+	.wp-block-image figcaption {
+	    margin-top: -.8em;
+	    margin-bottom: 0;
+	    font-size: 12px;
+	    text-align: right;
+	    color: #aaa;
+	}
+	.thing {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.single-content-wrap {
+		ul {
+			margin-left: 24px;
+			li {
+				margin-bottom: 15px;
+	    		line-height: 24px;
+	    	}
+		}
+	}
+	.viewability {
+		position: sticky;
+    	top: 0;
+    	z-index: 999999;
+	}
+	.outter-page-title {
+		padding: 0 0 15px 0px;
+		color: $white;
+		text-shadow: 2px 2px 9px #000;
+		text-align: center;
+	}
+	.inner-page-title {
+		padding: 0 0 15px 0px;
+	}
+	.blog-post {
+		a {
+			color: $link-color;
+		}
+	}
+	.center {
+		text-align: center;
+	}
+	.white {
+		color: #fff;
+	}
+	.relative {
+		position: relative;
+	}
+	.absolute {
+		position: absolute;
+	}
+	.group:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.max-width {
+		max-width: 1360px;
+		margin: 0 auto;
+	}
+	.clear {
+		clear: both;
+	}
+	.main-content-wrap {
+		background: url(../images/wood-bkg.jpg);
+		/*background: url(../images/holidays.jpg);*/
+		background-position: top;
+		background-attachment: fixed;
+		a {
+			color: $link-color;
+		}
+	}
+	.outter-content-wrap {
+		padding: 0 10px 30px 10px;
+	}
+	.inner-content-wrap {
+		background: #fff; 
+		opacity: .9; 
+	}
+	.padding {
+		padding: 30px;
+	}
+	.checked {
+	    color: orange;
+	}
+	.fa {
+		font-size: 1.5em;
+	}
+	button { 
+		font-family: 'Roboto', sans-serif;
+		background: $link-color;
+		color: #fff;
+		border: none;
+		padding: 15px;
+		font-size: 1.2em;
+		/* border-radius: 5px; */
+		margin: 10px 0 30px 0;
+		/*box-shadow: 0px 0px 2px #000;
+		text-shadow: 0px 0px 2px #000;*/
+	}
+	.paginstion-wrap {
+		padding: 30px 15px 15px 15px;
+	}
+	.load_more a, .load_less a {
+		background: orange;
+		padding: 14px;
+		color: #fff;
+		margin: 10px;
+	}
+	.product-inner {
+		button {
+			font-size: .7em;
+			border-radius: 0px;
+			margin: 0;
+		}
+	}
+	.slider-shadow {
+		height: 10px;
+		margin-bottom: 20px;
+		background: rgba(0,0,0,.3);
+		background: -moz-linear-gradient(top, #000000 0%, transparent 100%);
+		background: -webkit-linear-gradient(top, #000000 0%,transparent 100%);
+		background: linear-gradient(to bottom, #000000 0%,transparent 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="transparent",GradientType=0 );
+	}
+	.directory {
+		h2 {
+			margin: 20px 0 5px 0
+		}
+	}
+	.mobile-bar {
+		padding: 10px;
+		z-index: 999999;
+		background: $gray; 
+		position: sticky;
+		position: -webkit-sticky;
+		z-index: 999999;
+		top: 50px;
+		.social-icon {
+			float: left;
+			width: 30px;
+			margin-left: 12px;
+		}
+		.menu-icon {
+			float: left;
+			width: 30px;
+		}
+		.small-logo {
+			float: left;
+			margin-right: 8px;
+			height: 30px;
+		}	
+	}
+	
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
+
+	#mc_embed_signup {
+		clear:left; font:14px;
+	}
+	#mc_embed_signup form {
+		padding: 0;
+	}
+	#mc_embed_signup.button {
+		background: orange; border-radius: 5px;
+	}
+	#mc_embed_signup input.button {
+	    background: $link-color;
+	}
+	#mce-EMAIL {
+		width: 68%; max-width: 300px; padding: 10px; font-size: 20px;
+	}
+	#mc-embedded-subscribe {
+		background: orange; padding: 10px; font-size: 20px; margin-top: 10px; border: none; color: #fff; border-radius: 5px;
+	}
+
+	.mobile-text-logo {
+		max-width: 220px;
+		width: 80%;
+	}
+
+	.mobile-menu {
+		display: none;
+		z-index: 99999999999; 
+		position: fixed; 
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		background: url(../images/wood-bkg.jpg);
+		margin-left: -100%;
+		.mobile-menu-shadow {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0,0,0,.7);
+			text-align: center; 
+			overflow-y: auto;
+			.close-menu-btn {
+				position: absolute; 
+				color: $white; 
+				top: -5px; 
+				right: 5px; 
+				font-size: 3em;
+			}
+			.mobile-text-logo {
+				margin: 15px;
+			}
+		}
+
+	}
+	.social-wrap-mobile-nav {
+		position: relative;
+		text-align: center;
+	}
+	.mobile-nav-wrap {
+		/* background: red; */
+		border-top: 1px #333 solid;
+		ul {
+			li {
+				list-style: none;
+				font-size: 1.2em;
+				padding: 15px;
+				border-bottom: 1px #333 solid;
+			}
+		}
+	}
+	.page-id-234 {
+		ul {
+			margin-left: 30px;
+		}
+
+	}
+	.video-responsive {
+	    overflow:hidden;
+	    padding-bottom:56.25%;
+	    position:relative;
+	    height:0;
+	    margin-bottom: 30px;
+	}
+	.video-responsive iframe {
+	    left:0;
+	    top:0;
+	    height:100%;
+	    width:100%;
+	    position:absolute;
+	}
+	#sidebar-sponsor img {
+		display: block;
+	}
+	.filters {
+		display: none;
+		color: #fff;
+	}
+	.filter-icon {
+		cursor: pointer;
+	}
+	#filter-wrap {
+		display: none;
+	}
+	blockquote, blockquote p {
+		font-size: 28px!important;
+		font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif!important;
+		background: #eee;
+		padding: 8px 8px 1px 12px;
+		margin-bottom: 15px;
+		line-height: 1.2em!important;
+	}
+	blockquote {
+		padding-left: 30px;
+    	border-left: 8px #000 solid;
+		cite {
+		    font-size: 16px;
+		}
+	}
+
+
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+	body {
+		h1, h2 {
+			font-size: 1.9em;
+		}
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+	}
+	
+}
+
+@media screen and (max-width: 960px) {
+	body {
+		button {
+			padding: 10px;
+			font-size: 1em;
+		}
+	}
+}
+
+@media screen and (max-width: 520px) {
+	body {
+		.fa {
+			font-size: 1.2em;
+		}
+		.star-rating {
+			margin-bottom: 15px;
+		}
+	}
+	
+}

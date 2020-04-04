@@ -1,0 +1,78 @@
+@import './constants.scss';
+
+/* Search Page Styles */
+
+.search-results, .search-no-results, .page-template-search-template {
+	#search-widget {
+		label {
+			display: none;
+		}
+		#s {
+			font-size: 20px;
+			padding: 8px 80px 8px 8px;
+			border: 1px #aaa solid;
+			margin: 5px 0 15px 0;
+			width: calc(100% - 108px);//65%;
+		}
+		#searchsubmit {
+			margin-left: -75px;
+    		font-size: 20px;
+    		color: orange;
+		}
+	}
+	.search-item {
+		position: relative;
+		min-height: 100px;
+		border-bottom: 1px solid #aaa;
+		.featured-image {
+			float: left;
+			height: 100px;
+			width: 100px;
+			margin: 15px 15px 15px 0; 
+		}
+		.search-meta {
+			position: absolute;
+			top: 50%;
+			left: 115px;
+			transform: translateY(-50%);
+			h3 {
+				font-size: 20px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.search-item:last-child {
+		border-bottom: 0px solid #aaa;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.search-results {
+		.search-item {
+			min-height: initial;
+			border-bottom: 1px solid #aaa;
+			.featured-image {
+				float: none;
+				height: initial;
+				padding-top: 25%;
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+			.search-meta {
+				position: relative;
+				top: initial;
+				left: initial;
+				transform: none;
+				/* h3 {
+					font-size: 20px;
+				}
+				p {
+					font-size: 14px;
+				} */
+			}
+		}
+	}	
+}
+		

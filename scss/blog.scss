@@ -1,0 +1,206 @@
+@import './constants.scss';
+
+.blog-page {
+	.blog-post {
+		a {
+			color: $black;
+		}
+		a:hover {
+			color: #666;
+		}
+	}
+	#blog-post-wrap {
+	width: calc(100% - 320px);
+	float: left;
+	}
+	.blog-sidebar-wrap {
+		width: 300px;
+		float: right;
+		background: $white;
+		margin-top: 10px;
+		margin-right: 8px;
+		opacity: .9;
+	}
+	.single-mobile-title {
+		line-height: 1em;
+		font-size: 2.2em;
+		margin-bottom: 10px;
+	}
+	.sharethis-inline-share-buttons {
+		margin-bottom: 24px;
+	}
+	#sidebar-widget {
+		/* padding: 15px; */
+		margin: 0 0 -1.5px 0;
+	}
+	.sidebar-widget ul li {
+		padding: 10px;
+		border-bottom: 1px $border solid;
+	}
+	.widget-title {
+		background: $black;
+		padding: 10px;
+		color: $white;
+		text-align: center;
+	}
+	.author {
+		padding: 10px; 
+		border-bottom: 1px solid $border;
+	}
+	.author-avatar {
+		float: left; 
+		margin-right: 15px; 
+		width: 60px; 
+		height: 60px; 
+		border-radius: 50%; 
+		border: $link-color 2px solid; 
+	}
+	.author-name {
+		color: $black;
+	}
+	.author-description {
+		color: $black;
+	}
+	.sidebar-widget .searchform label {
+		display: none;
+	}
+	.sidebar-widget .searchform {
+		padding: 10px;
+	}
+	.sidebar-widget .searchform input {
+		font-size: 1em;
+	    padding: 10px;
+	}
+	#searchsubmit {
+		background: $link-color !important;
+		padding: 10px !important;
+		height: 40px;
+	}
+	.single-content-wrap {
+		background: $white; 
+		margin: 0 10px 10px 10px; 
+		padding: 30px;
+		p {
+			font-size: 16px;
+			line-height: 1.9em;
+			margin-bottom: 15px;
+		}
+		img {
+			margin: 15px 0;
+			max-width: 100%; 
+			height: auto;
+		}
+	}
+	.single-header {
+		position: relative;
+		color: $white;
+		padding-top: 47%;
+		background-color: $black;
+		margin: 10px 10px 0 10px;
+		h1 {
+			line-height: 1em;
+			margin-bottom: 15px;
+		}
+	}
+	#post-meta li, #post-meta-mobile li {
+		list-style: none;	
+	}
+	#post-meta-mobile {
+		margin-bottom: 15px;
+	}
+	.single-shadow-wrap {
+		-webkit-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	    -o-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	    transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	    background-image: -moz-linear-gradient(to bottom, transparent 0%, #000 100%);
+	    background-image: -webkit-gradient(linear, 0 0, 0% 100%, from(transparent), to(#000));
+	    background-image: -webkit-linear-gradient(top, transparent, #000);
+	    background-image: -o-linear-gradient(top, transparent, #000);
+	    background-image: linear-gradient(to bottom, transparent 0%, #000 100%);
+	    background-repeat: repeat-x;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    padding: 5px 30px 30px 30px;
+	    h1 {
+	    	text-shadow: 2px 2px 5px #000;
+	    }
+	}
+	.authorInfo {
+		margin-top: 20px;
+		h3 {
+			margin: 0;
+			font-size: 1.4em;
+		}
+	}
+	#comments {
+		margin-top: 30px;
+		input, textarea {
+			border: 1px #111 solid;
+			display: block;
+		}
+	}
+	.sharethis-inline-share-buttons {
+		position: -webkit-sticky; 
+		position: sticky; 
+		top: 0px; 
+		background: $white;
+	}
+	.related-post {
+		clear: both;
+	}
+	.related-inner {
+		position: relative;
+		height: 65px;
+		border-bottom: 1px #aaa solid;
+	}
+	.related-thumb {
+		width: 65px; 
+		height: 65px; 
+		float: left; 
+		margin-right: 10px;
+	}
+	.related-desc {
+		position: absolute;
+		top: 50%;
+		left: 75px;
+		right: 15px;
+		transform: translateY(-50%);
+	}
+	.related-title {
+		font-size: 16px;
+		color: #000;
+		font-weight: 800;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.blog-page {
+		#blog-post-wrap {
+			width: 100%;
+			float: none;
+		}
+		.blog-sidebar-wrap {
+			width: calc(100% - 22px);
+		    margin-left: 10px;
+		    margin-right: 12px;
+		    float: none;
+		    clear: both;
+		}
+		.single-content-wrap {
+			padding: 10px;
+		}
+		.single-header {
+			/* margin: 0; */
+		}
+		.blog-sidebar-wrap {
+		    /* width: calc(100% - 2px); */
+		    /* margin-left: 0;
+		    margin-right: 0; */
+		}
+		.sharethis-inline-share-buttons {
+			top: 100px; 
+		}
+	}
+}
