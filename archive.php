@@ -96,7 +96,6 @@
 	<div id="blog-post-wrap">
 		<?php 
 		if ( have_posts() ) : while (have_posts() ) : the_post(); 
-
 			if ( has_post_thumbnail() ) {
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 			} else {

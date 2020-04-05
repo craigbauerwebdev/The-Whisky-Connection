@@ -2,60 +2,27 @@
 	/* 
 	Template Name: Home Page Template
 	*/
-	
 	get_header(); ?>
-
-	<!-- <div id="root"></div> -->
-
-	
-
-
 	<div class="main-content-wrap front-page">
-
-		<!-- <div style="padding-top: 30%; background: url(http://localhost:8888/wp-sites/weewhiskyconnection/wp-content/uploads/2018/07/caol-ila-dist2.jpg); background-size: cover; background-position: top;">
-			<h1>Post Title</h1>
-		</div> -->
-
 		<div class="slider-shadow"></div>
-
-		<div class="adnxs-desktop">
-			<center>
-				<div id="ga_17755898"> </div>
-			</center><br>
-		</div>
-		<div class="adnxs-mobile">
-			<center><div id="ga_17756166"></div></center><br>
-		</div>
-
-
-
+		<?php include('ads/top_ad.php'); ?>
 		<div class="blog-preview-wrap">
 			<h1 class="home-page-title center">Whisky News</h1>
 			<div class="blog-wrap max-width group">
 		<?php
-
 			$args = array(
 				'post_type' => 'post',
 				'posts_per_page' => 8,
 				/*'orderby' => 'rand'*/
 			);
-
 			$the_query = new WP_Query( $args );
-
-		?>
-
-			<?php 
-
 			//if ( have_posts() ) : while (have_posts() ) : the_post();
-			if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
-
+			if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
 				if ( has_post_thumbnail() ) {
 					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 				} else {
-
 					$featured_img_url = "https://kentuckypeerless.com/wp-content/uploads/cache/2017/02/Peerless-Distilling-Co-3/918773956.jpg";
 				} ?>
-
 				<div class="blog-post">
 					<a onclick="gtag('event', 'click', {'event_category': 'Blog Post: <?php the_title(); ?>'});" href="<?php the_permalink(); ?>">
 						<div class="blog-post-inner">
@@ -68,55 +35,34 @@
 						</div>
 					</a>
 				</div>
-
-
 			<?php endwhile; else: ?>
 				<p>There are no posts available.</p>
 			<?php endif; ?>
-
 			<?php wp_reset_postdata(); ?>
-
 			<div class="clear center">
 				<a href="/blog">
 					<button>Read More</button>
 				</a>
 			</div>
-
 			</div>
 		</div>
-
-
-
-
-
 		<h2 class="outter-page-title">Whisky</h2>
 		<div class="grid-wrap max-width group">
-
 		<?php
+			$args = array(
+					'post_type' => 'products',
+					'posts_per_page' => 6,
+					'orderby' => 'rand'
+				);
+			$the_query = new WP_Query( $args );
 
-		$args = array(
-				'post_type' => 'products',
-				'posts_per_page' => 6,
-				'orderby' => 'rand'
-			);
-
-		$the_query = new WP_Query( $args );
-
-		?>
-
-		<?php
 			if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
-
 				if ( has_post_thumbnail() ) {
 					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 				} else {
-
 					$featured_img_url = "https://kentuckypeerless.com/wp-content/uploads/cache/2017/02/Peerless-Distilling-Co-3/918773956.jpg";
-
 				}
-
-				?>
-					
+				?>	
 				<div class="product">
 					<a onclick="gtag('event', 'click', {'event_category': 'Whisky: <?php the_title(); ?>'});" href="<?php the_permalink(); ?>">
 						<div class="product-inner">
@@ -175,90 +121,55 @@
 									</div>
 								</div>
 							</div>
-							<!-- <div class="more-info">
-								<img src="<?php //echo get_template_directory_uri(); ?>/images/more-info.png">
-							</div> -->
-
-							<!-- <?php
-							if ( is_user_logged_in() ) { ?>
-								<div class="desktop-fav">
-							    	<?php echo do_shortcode('[favorite_button]'); ?>
-							    </div>
-							<?php } ?> -->
 						</div>
 					</a>
 				</div>
-
 				<?php endwhile; else: ?>
 					<p>There are no posts available.</p>
 				<?php endif; ?>
-
 				<?php wp_reset_postdata(); ?>
-
 			<div class="clear center">
 				<a href="/whisky">
 					<button>Explore Whiskies</button>
 				</a>
 			</div>
 		</div>
-
 		<?php
-
 			$args = array(
 				'post_type' => 'dist',
 				'posts_per_page' => 8,
 				/*'orderby' => 'rand'*/
 			);
-
 			$the_query = new WP_Query( $args );
-
 		?>
-
 		<div class="distilliries">
 			<h2 class="home-page-title center">Distilleries</h2>
-
 			<div class="dist-grid max-width group">
 				<div style="padding: 0 10px;">
-
 				<?php
 				if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
 					if ( has_post_thumbnail() ) {
 						$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 					} else {
-						$featured_img_url = "https://kentuckypeerless.com/wp-content/uploads/cache/2017/02/Peerless-Distilling-Co-3/918773956.jpg"; //default is whisky barrels
+						$featured_img_url = "https://kentuckypeerless.com/wp-content/uploads/cache/2017/02/Peerless-Distilling-Co-3/918773956.jpg";
 					}
-
 				?>
 					<a onclick="gtag('event', 'click', {'event_category': 'Distillery: <?php the_title(); ?>'});" href="<?php the_permalink(); ?>">
 						<div class="dist-thumb" style="background: url(<?php echo $featured_img_url; ?>); background-size: cover; background-position: center center;">
 							<img class="dist-logo" alt="<?php the_title(); ?>" src="<?php the_field('logo_img'); ?>" />
 						</div>
 					</a>
-
 				<?php endwhile; else: ?>
 					<p>There are no distilleries available.</p>
 				<?php endif; ?>
-
 				<?php wp_reset_postdata(); ?>
-
 				</div> 
 			</div>
 		</div>
-
 		<div class="dist-btn clear center">
 			<a href="/distilleries">
 				<button>Explore Distilleries</button>
 			</a>
 		</div>
-
-
-
-		
-
 	</div>
-	
-	<?php //echo do_shortcode('[searchandfilter fields="search,category,post_tag" types=",checkbox,radio" headings=",Whisky Type,Details" post_types="products" operators=",OR,OR"]');?>
-
-
-
 <?php get_footer();?>
