@@ -116,9 +116,6 @@
 	.distilliries, .blog-preview-wrap {
 		padding-top: 15px;
 	}
-	.dist-grid {
-
-	}
 	.dist-thumb {
 		position: relative;
 		float: left;
@@ -142,7 +139,7 @@
 		transform: translate(-50%, -50%);
 		width: 80%;
 		overflow: hidden;
-		z-index: 9999;
+		z-index: 1;
 	}
 	.dist-btn {
 		padding-top: 10px;
