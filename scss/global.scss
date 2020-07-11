@@ -63,8 +63,8 @@ body {
 		appearance: none;
 	}
 	.single-content-wrap {
-		ul {
-			margin-left: 24px;
+		ul, ol {
+			margin: 10px 10px 24px 10px;
 			li {
 				margin-bottom: 15px;
 	    		line-height: 24px;
